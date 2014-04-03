@@ -22,6 +22,10 @@ angular.module('guityApp', [
         templateUrl: 'views/similar.html',
         controller: 'similarCtrl'
       })
+      .when('/artist/events/:mbid', {
+        templateUrl: 'views/events.html',
+        controller: 'eventsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

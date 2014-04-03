@@ -18,6 +18,7 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
   </head>
   <body ng-app="guityApp">
     <!--[if lt IE 7]>
@@ -42,13 +43,7 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
-    <!-- angular-google-maps -->
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-    <script src='/bower_components/underscore/underscore-min.js'></script>
-    <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
-    <!-- end angular-google-maps -->
-
+    
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
@@ -76,11 +71,17 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <!-- angular-google-maps -->    
+    <script src='bower_components/underscore/underscore-min.js'></script>
+    <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+    <!-- end angular-google-maps -->
+
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/search.js"></script>
         <script src="scripts/controllers/artist.js"></script>
         <script src="scripts/controllers/similar.js"></script>
+        <script src="scripts/controllers/events.js"></script>
         <!-- endbuild -->
 </body>
 </html>
