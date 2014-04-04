@@ -29,6 +29,6 @@ angular.module('guityApp', [
       .otherwise({
         redirectTo: '/'
       });
-      
+
       $locationProvider.html5Mode(true);
   });
