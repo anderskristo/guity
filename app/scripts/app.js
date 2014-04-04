@@ -8,7 +8,7 @@ angular.module('guityApp', [
   'google-maps',
   'wu.masonry'  
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/search.html',
@@ -29,4 +29,6 @@ angular.module('guityApp', [
       .otherwise({
         redirectTo: '/'
       });
+      
+      $locationProvider.html5Mode(true);
   });
