@@ -6,7 +6,7 @@ angular.module('guityApp', [
   'ngSanitize',
   'ngRoute',
   'google-maps',
-  'wu.masonry'
+  'wu.masonry'  
 ])
   .config(function ($routeProvider) {
     $routeProvider

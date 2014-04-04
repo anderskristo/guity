@@ -24,8 +24,23 @@
 <div class="artist-view container">
   <div class="row">
 
-    <div class="col-md-12">
+    <div class="col-md-6">
       <img src="{{artist.image.mega}}" alt="">
+    </div>
+
+    <div class="col-md-6" ng-controller="spotifyCtrl">      
+        <div ng-repeat="track in tracks | limitTo: limit">
+          <iframe 
+            ng-src="{{trackHref}}"
+            width="300"
+            height="380"
+            frameborder="0"
+            allowtransparency="true"
+            theme="light"
+            view="coverart">
+          </iframe>
+        </div>
+      </ul>
     </div>
 
   </div>

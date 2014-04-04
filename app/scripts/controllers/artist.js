@@ -8,7 +8,7 @@ angular.module('guityApp')
         return $http.get(lastfm + '&method=artist.getInfo&mbid=' + $routeParams.mbid);
       }
     };
-  })
+  })  
   .controller('artistCtrl', function ($scope, $routeParams, $http, getData) {
     getData.async().then(function(d) {
     
@@ -32,6 +32,23 @@ angular.module('guityApp')
       scrobblers.start();
     });
 
+  })
+  .controller('spotifyCtrl', function ($scope, $http, $sce, getData) {
+    getData.async().then(function(d) {
+      $scope.sname = d.data.artist.name;
+
+      $http.get('http://ws.spotify.com/search/1/track.json?q=' + $scope.sname).success(function(data) {
+        $scope.tracks = data.tracks;
+
+        jQuery.each($scope.tracks, function(index, track) {          
+          $scope.trackHref = $sce.trustAsResourceUrl('https://embed.spotify.com/?uri=' + track.href);          
+        });
+        
+      });
+
+      $scope.limit = 1;
+
+    });
   });
 
 })();
