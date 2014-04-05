@@ -11,5 +11,3 @@ Put you API key here:
 ```javascript
 var key = 'XXX';
 ````
-## Demo
-http://anderskristo.me/guity
