@@ -29,9 +29,9 @@
     </div>
 
     <div class="col-md-6" ng-controller="spotifyCtrl">      
-        <div ng-repeat="track in tracks | limitTo: limit">
+        <div ng-repeat="track in tracks | limitTo: limit">        
           <iframe 
-            ng-src="{{trackHref}}"
+            ng-src="{{trustSrc(embed + track.href)}}"
             width="300"
             height="380"
             frameborder="0"

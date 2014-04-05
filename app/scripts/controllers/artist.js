@@ -40,10 +40,16 @@ angular.module('guityApp')
       $http.get('http://ws.spotify.com/search/1/track.json?q=' + $scope.sname).success(function(data) {
         $scope.tracks = data.tracks;
 
-        jQuery.each($scope.tracks, function(index, track) {          
-          $scope.trackHref = $sce.trustAsResourceUrl('https://embed.spotify.com/?uri=' + track.href);          
-        });
-        
+        // jQuery.each($scope.tracks, function(index, track) {          
+        //   $scope.trackHref = track.href;
+        // });
+
+        $scope.trustSrc = function(src) {
+          return $sce.trustAsResourceUrl(src);
+        };
+
+        $scope.embed = 'https://embed.spotify.com/?uri=';
+
       });
 
       $scope.limit = 1;
