@@ -1,6 +1,6 @@
 'use strict';
 
-var key = 'XXX';
+var key = '2776b29967e1bfd49cfc90686cd48b6c';
 var lastfm = 'http://ws.audioscrobbler.com/2.0/?api_key=' + key + '&format=json';
 
 angular.module('guityApp')
