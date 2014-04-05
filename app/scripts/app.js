@@ -28,6 +28,13 @@ angular.module('guityApp', [
       })
       .otherwise({
         redirectTo: '/'
-      });
-      
+      });    
+  })
+  .controller('appCtrl', function ($scope) {
+    $scope.$on('load', function() {
+      $scope.loading = true;
+    });
+    $scope.$on('unload', function() {
+      $scope.loading = false;
+    });
   });
