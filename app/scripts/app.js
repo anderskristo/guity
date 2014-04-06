@@ -26,6 +26,14 @@ angular.module('guityApp', [
         templateUrl: 'views/events.html',
         controller: 'eventsCtrl'
       })
+      .when('/artist/albums/:mbid', {
+        templateUrl: 'views/albums.html',
+        controller: 'albumsCtrl'
+      })
+      .when('/artist/albums/:name/:mbid', {
+        templateUrl: 'views/album.html',
+        controller: 'albumCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });    

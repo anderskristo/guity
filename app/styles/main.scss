@@ -61,6 +61,15 @@ body {
 
     .navbar-header {
       float: none;
+
+      .portrait {
+        text-align: center;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 500px;
+        }
+      }      
     }
 
     .navbar-left {
@@ -580,4 +589,108 @@ body {
   to {transform:rotate(360deg);}
 }
 
-/* artist-view */
+/* albums-view */
+
+.albums-view {
+
+    .albgrid {
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+      li {
+        width: 373px;
+        margin: 0 0 10px 0;
+        text-align: left;
+        position: relative;
+      }
+      figure {
+        margin: 0;
+        position: relative;
+        cursor: pointer;
+        img {
+          z-index: 200;
+          width: 100%;
+          display: block;
+          position: relative;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+        figure:hover {
+            img {
+              -webkit-transform: translateY(-90px);
+              -moz-transform: translateY(-90px);
+              -ms-transform: translateY(-90px);
+              transform: translateY(-90px);
+            }
+        }
+      figcaption {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        height: 90px;
+        width: 100%;
+        background: $mainColor;
+        color: #d1d1d1;
+        h3 {
+          margin: 0;
+          padding: 0;
+          color: #fff;
+          font-weight: 100;
+        }
+          a:hover {
+            text-decoration: none;
+          }
+      }
+    }
+}
+
+/* album-view */
+
+.album-view {
+  h1 {
+    font-size: 48px;
+    font-weight: 100;
+    margin-bottom: 20px;
+  }
+  .album-info {
+    img {
+      width: 100%;
+    }
+  }
+  .album-tracks {
+    ul {
+      padding: 0;
+      list-style: none;
+      a {
+        color: #fff;        
+      }
+      a:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+      li {
+        background: rgba(68, 32, 112, 0.16);
+        margin-bottom: 10px;
+        padding: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        .icon-play {          
+          float: right;
+          font-size: 50px;          
+          line-height: 22px;
+          color: #442070;
+        }
+        .icon-play:before {
+          content: "\e6ad";
+        }
+      }
+    }
+  }
+}
+
