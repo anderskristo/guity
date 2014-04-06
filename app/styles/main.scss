@@ -39,23 +39,33 @@ $bigRadius: 50px;
 
 /* App */
 
+.app {
+  margin: 20px 0;
+}
+
 body {
   background: #1D0F2D;
-    color: #fff;
-    font-weight: 100;
+  color: #fff;
+  font-weight: 100;
 }
 
 .navbar {
     background-color: $mainColor;
     border: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 115px;
 
     .navbar-header {
-        float: none;
+      float: none;
     }
 
-        .navbar-left {
-            min-width: 20%;
-        }
+    .navbar-left {
+      min-width: 20%;
+    }
 
     .goback {
       float: left;
@@ -66,67 +76,58 @@ body {
     }
 
     .navbar-brand {
-        color: #fff;
-        font-weight: 100;
-        font-size: 41px;
-        margin: 10px 0;
+      color: #fff;
+      font-weight: 100;
+      font-size: 41px;
+      margin: 10px 0;
     }
 
     .navbar-brand:hover {
       color: #fff;
     }
-
-        .navbar-nav {
-
-            li {
-                a {
-                    color: #fff;
-                    font-size: 18px;
-                    letter-spacing: 1px;
-                    padding: 0 0 5px 0;
-                    margin: 28px 20px 0 20px;
-                }
-                a:hover,
-                a.active-nav {
-                    color: #fff;
-                    border-bottom: 1px solid #1D0F2D;
-                }
+    .navbar-nav {
+      text-align: center;
+        li {
+          width: 100%;
+          margin-top: 20px;
+            a {
+              color: #fff;
+              font-size: 18px;
+              letter-spacing: 1px;
+              padding: 0 0 5px 0;              
+            }            
+            a:hover,
+            a.active-nav {
+              color: #fff;              
+            }
+            a.active-nav:after {
+              content: ' ';
+              display: block;
+              position: absolute;
+              left: 0;
+              background-color: #1D0F2D;
+              top: 50%;
+              margin-top: -22px;
+              height: 43px;
+              width: 5px;
+            }
+            span {
+              font-size: 32px;
+              color: #fff;
+            }
+            .icon-archive:before {
+              content: "\e6a2";
+            }
+            .icon-calendar:before {
+              content: "\e645";
+            }
+            .icon-users:before {
+              content: "\e614";
             }
         }
-
-    .navbar-stats {
-    float: left;
-    margin-left: 50px;
-    text-align: center;
-    height: 71px;
-    padding-top: 8px;
-
-      .stat-listeners {
-        float: left;
-        min-width: 200px;
-      }
-
-      .stat-scrobblers {
-        float: left;
-        min-width: 200px;
-      }
-
-      .stat-text {
-        font-size: 16px;
-      }
-
-      span {
-        color: #fff;
-        font-weight: 100;
-        font-size: 25px;
-      }
     }
 
 } /* Navbar end */
-
-.app {
-  margin-top: 70px;
-}
 
 .video-hero {
   height: 500px;
@@ -405,29 +406,47 @@ body {
 
 /* artist-view */
 
-.artist-view {
+.artist-view {  
 
   h1, h2, h3, h4, h5 {
     color: #fff;
     font-weight: 100;;
+    margin-top: 20px 0;
   }
+ 
+ .artist-stats { 
+  float: left;
+  margin-top: 35px;
+   .stat-scrobblers,
+   .stat-listeners {
+    width: 100%;
+    float: left;
+   }
 
-    .events {
-
-        h2 {
-            padding-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-
-            li {
-                font-size: 20px;
-                padding-bottom: 5px;
-            }
-        }
-    }
+   .leftStat {
+    float: left;
+    margin-bottom: 40px;
+    margin-right: 50px;
+    text-align: center;    
+   }
+    
+   .icon-sound,
+   .icon-lastfm {
+     display: block;
+     font-size: 76px;
+     margin-bottom: 10px;
+   }
+   .icon-sound:before {
+     content: "\e6b8";
+   }   
+   .icon-lastfm:before {
+    content: "\e705";
+   }
+   #listeners,
+   #scrobblers {
+    font-size: 76px;
+   }
+ }
 
 }
 
@@ -436,11 +455,11 @@ body {
 .similar-view {
 
     .simgrid {
-      margin: 100px auto;
-        padding: 0;
+      margin: 0 auto;
+      padding: 0;
       list-style: none;
       li {
-            width: 373px;
+        width: 373px;
         margin: 0 0 10px 0;
         text-align: left;
         position: relative;
@@ -448,10 +467,10 @@ body {
       figure {
         margin: 0;
         position: relative;
-            cursor: pointer;
+        cursor: pointer;
         img {
-                z-index: 200;
-                width: 100%;
+          z-index: 200;
+          width: 100%;
           display: block;
           position: relative;
                 -webkit-transition: all 0.4s ease-in-out;
@@ -510,3 +529,55 @@ body {
     width: 100%;
     height: 600px;
 }
+
+/* loading-bar */
+.loading-cont {
+  width: 100%;  
+  .loading-bar {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+    display: block;
+    font-weight: 100;
+    .icon-cw {
+      color: $mainColor;
+      font-size: 64px;
+      display: block;      
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 1000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 1000ms;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 1000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+      
+      animation-name: spin;
+      animation-duration: 1000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .icon-cw:before {
+      content: "\e68c";
+    }
+  }
+}
+
+/* spin-that-shit */
+@-webkit-keyframes spin {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+/* artist-view */

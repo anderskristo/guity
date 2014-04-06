@@ -21,13 +21,19 @@
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
     <base href="/">
   </head>
-  <body ng-app="guityApp">
+  <body ng-app="guityApp" ng-controller="appCtrl">
+    <div class="loading-cont" ng-show="loading">
+      <div class="loading-bar">
+        <span class="icon-cw"></span>
+        Loading...
+      </div>
+    </div>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="app" ng-view=""></div>
+    <div class="app" ng-view></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

@@ -1,17 +1,27 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="navbar-header">
     <div class="navbar-left">
-      <a class="goback" href="#artist/{{artist.mbid}}/">Back</a>
-      <a class="navbar-brand" href="#artist/{{artist.mbid}}/">Guity - {{artist.name}}</a>
+      <!-- <a class="goback" href="#artist/{{artist.mbid}}/">Back</a> -->
+      <a class="navbar-brand" href="#artist/{{artist.mbid}}/">Guity</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="#artist/similar/{{artist.mbid}}" class="active-nav">Similar artists</a></li>      
-      <li><a href="#artist/events/{{artist.mbid}}">Next event</a></li>
+      <li>
+        <span class="icon-archive"></span>
+        <a href="#artist/albums/{{artist.mbid}}">Albums</a>
+      </li>
+      <li>
+        <span class="icon-users"></span>
+        <a href="#artist/similar/{{artist.mbid}}" class="active-nav">Similar</a>
+      </li>
+      <li>
+        <span class="icon-calendar"></span>
+        <a href="#artist/events/{{artist.mbid}}">Events</a>
+      </li>
     </ul>
   </div>
 </nav>
 
-<div class="similar-view container">
+<div class="similar-view container" fadey="1000">
   <div class="row">
 
     <div class="similar col-md-12" ng-controller="similarCtrl">

@@ -1,34 +1,56 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="navbar-header">
-    <div class="navbar-left">
-      <a class="goback" href="#/">Back</a>
-      <a class="navbar-brand" href="#">Guity - {{artist.name}}</a>
+    <div class="navbar-left">      
+      <a class="navbar-brand" href="#">Guity</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="#artist/similar/{{artist.mbid}}">Similar artists</a></li>
-      <li><a href="#artist/events/{{artist.mbid}}">Next event</a></li>
-    </ul>
-    <div class="navbar-stats">
-      <div class="stat-listeners">
-        <span class="stat-text">Listeners</span><br>
-        <span id="listeners"></span>
-      </div>
-      <div class="stat-scrobblers">
-        <span class="stat-text">Scrobblers</span><br>
-        <span id="scrobblers"></span>
-      </div>
-    </div>
+      <li>
+        <span class="icon-archive"></span>
+        <a href="#artist/albums/{{artist.mbid}}">Albums</a>
+      </li>
+      <li>
+        <span class="icon-users"></span>
+        <a href="#artist/similar/{{artist.mbid}}">Similar</a>
+      </li>
+      <li>
+        <span class="icon-calendar"></span>
+        <a href="#artist/events/{{artist.mbid}}">Events</a>
+      </li>
+    </ul>    
   </div>
 </nav>
 
-<div class="artist-view container">
+<div class="artist-view container" ng-hide="loading" fadey="1000">
   <div class="row">
+
+  <div class="col-md-12">
+    <h1>{{artist.name}}</h1>
+  </div>
 
     <div class="col-md-6">
       <img src="{{artist.image.mega}}" alt="">
     </div>
 
-    <div class="col-md-6" ng-controller="spotifyCtrl">      
+    <div class="col-md-6">
+      <div class="artist-stats">
+        <div class="stat-listeners">
+          <div class="leftStat">
+            <span class="icon-sound"></span>
+            <span class="stat-text">Listeners</span><br>
+          </div>
+          <span id="listeners"></span>
+        </div>
+        <div class="stat-scrobblers">
+          <div class="leftStat">
+            <span class="icon-lastfm"></span>
+            <span class="stat-text">Scrobblers</span><br>
+          </div>
+          <span id="scrobblers"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-6" ng-controller="spotifyCtrl">      
         <div ng-repeat="track in tracks | limitTo: limit">        
           <iframe 
             ng-src="{{trustSrc(embed + track.href)}}"
@@ -41,7 +63,7 @@
           </iframe>
         </div>
       </ul>
-    </div>
+    </div> -->
 
   </div>
 </div>

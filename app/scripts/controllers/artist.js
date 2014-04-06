@@ -10,14 +10,16 @@ angular.module('guityApp')
     };
   })  
   .controller('artistCtrl', function ($scope, $routeParams, $http, getData) {
+    $scope.$emit('load')
     getData.async().then(function(d) {
     
-      var images = d.data.artist.image;
+      var images = d.data.artist.image;      
       for (var i in images){
         images[images[i]['size']] = images[i]['#text'];
       };
 
-      $scope.artist = d.data.artist;      
+      $scope.artist = d.data.artist;
+      console.log($scope.artist)    
       var options = {
         useEasing   : true,
         useGrouping : true,
@@ -30,7 +32,8 @@ angular.module('guityApp')
 
       var scrobblers = new countUp('scrobblers', 0, d.data.artist.stats.playcount);
       scrobblers.start();
-    });
+      $scope.$emit('unload')
+    });    
 
   })
   .controller('spotifyCtrl', function ($scope, $http, $sce, getData) {

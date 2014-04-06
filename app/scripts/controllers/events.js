@@ -2,6 +2,7 @@
 
 angular.module('guityApp')
   .controller('eventsCtrl', function($scope, $routeParams, $http, getData) {
+    $scope.$emit('load');
     getData.async().then(function(d) {
       $scope.artist = d.data.artist;
       $scope.name = d.data.artist.name;
@@ -26,6 +27,7 @@ angular.module('guityApp')
           },          
           zoom: 8
         };
+        $scope.$emit('unload');
       });
 
       $scope.limit = 10;
