@@ -11,7 +11,7 @@ angular.module('guityApp')
   })
   .controller('searchCtrl', function ($scope, artistSearch) {
 	$scope.$watch('searchField', function (newVal) {
-      if (newVal){
+      if (newVal) {
         var res = artistSearch.query({artist: newVal}, function () {
           var artists = res.results.artistmatches.artist;
           for (var a in artists) imageTfr(artists[a].image);

@@ -165,10 +165,23 @@ body {
 
 /* index-view */
 
-.app-feature {
-  margin-top: 150px;
+.app-feature {  
   position: relative;
   z-index: 1;
+
+  .intro {
+    margin-bottom: 100px;
+    text-align: center;
+    h1 {
+      font-size: 147px;
+      font-weight: 100;
+      margin: 0;
+    }
+    span {
+      font-size: 77px;
+      line-height: 43px;
+    }
+  }
 
   .find {
     text-align: center;
@@ -422,22 +435,32 @@ body {
     font-weight: 100;;
     margin-top: 20px 0;
   }
- 
- .artist-stats { 
-  float: left;
-  margin-top: 35px;
-   .stat-scrobblers,
-   .stat-listeners {
-    width: 100%;
-    float: left;
-   }
 
-   .leftStat {
+  .bio-content {
+    p {
+      font-size: 18px;          
+      letter-spacing: 1px;
+    }
+    a {
+      color: #fff;
+    }
+  }
+ 
+  .artist-stats { 
     float: left;
-    margin-bottom: 40px;
-    margin-right: 50px;
-    text-align: center;    
-   }
+    margin-top: 35px;
+    .stat-scrobblers,
+    .stat-listeners {
+      width: 100%;
+      float: left;
+    }
+
+    .leftStat {
+      float: left;
+      margin-bottom: 40px;
+      margin-right: 50px;
+      text-align: center;    
+    }
     
    .icon-sound,
    .icon-lastfm {

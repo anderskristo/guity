@@ -1,12 +1,11 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="navbar-header">
-    <div class="navbar-left">
-      <!-- <a class="goback" href="#artist/{{artist.mbid}}/">Back</a> -->
+    <div class="navbar-left">      
       <a class="navbar-brand" href="#artist/{{artist.mbid}}/">Guity</a>
     </div>
     <div class="portrait">
       <a href="/#artist/{{artist.mbid}}">
-        <img src="{{artist.image.medium}}" alt="">
+        <img src="{{artist.image.medium}}" alt="" fadey="1000">
       </a>
     </div>
     <ul class="nav navbar-nav">
@@ -43,7 +42,8 @@
               <a href="#artist/{{similar.mbid}}">
 							  <h3>{{similar.name}}</h3>
               </a>
-							<span>{{similar.match}}</span>
+							<span>{{(100*similar.match)| number:0}}%</span>
+              <div class="meter"></div>
 						</figcaption>
 					</figure>
 				</li>

@@ -5,7 +5,7 @@
     </div>
     <div class="portrait">
       <a href="/#artist/{{artist.mbid}}">
-        <img src="{{artist.image.medium}}" alt="">
+        <img src="{{artist.image.medium}}" alt="" fadey="1000">
       </a>
     </div>
     <ul class="nav navbar-nav">
@@ -33,7 +33,7 @@
   </div>
 
     <div class="col-md-6">
-      <img src="{{artist.image.mega}}" alt="">
+      <img src="{{artist.image.mega}}" alt="">      
     </div>
 
     <div class="col-md-6">
@@ -51,7 +51,14 @@
             <span class="stat-text">Scrobblers</span><br>
           </div>
           <span id="scrobblers"></span>
-        </div>
+        </div>        
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="bio-content">
+        <h2>Biography</h2>
+        <p ng-bind-html="artist.bio.content"></p>
       </div>
     </div>
 

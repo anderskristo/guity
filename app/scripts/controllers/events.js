@@ -4,6 +4,11 @@ angular.module('guityApp')
   .controller('eventsCtrl', function($scope, $routeParams, $http, getData) {
     $scope.$emit('load');
     getData.async().then(function(d) {
+      var images = d.data.artist.image;
+      for (var i in images){
+        images[images[i]['size']] = images[i]['#text'];
+      };
+      
       $scope.artist = d.data.artist;
       $scope.name = d.data.artist.name;
 
