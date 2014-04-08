@@ -25,7 +25,7 @@
   </div>
 </nav>
 
-<div class="albums-view container" ng-hide="loading" fadey="1000">
+<div class="albums-view" ng-hide="loading" fadey="1000">
   <div class="row">
     <div class="col-md-12">
 
@@ -37,7 +37,9 @@
 
         <li class="alb masonry-brick" ng-repeat="album in albums">
           <figure>
-            <img src="{{album.image.extralarge}}" alt="">
+            <a href="#artist/albums/{{album.name}}/{{album.artist.mbid}}">
+              <img src="{{album.image.extralarge}}" alt="">
+            </a>
             <figcaption>
               <a href="#artist/albums/{{album.name}}/{{album.artist.mbid}}">
                 <h3>{{album.name}}</h3>
