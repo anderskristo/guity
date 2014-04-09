@@ -243,9 +243,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'guity/<%= yeoman.dist %>',
-          src: ['*.html', 'guity/views/{,*/}*.html'],
-          dest: 'guity/<%= yeoman.dist %>'
+          cwd: '<%= yeoman.dist %>',
+          src: ['*.html', 'views/{,*/}*.html'],
+          dest: '<%= yeoman.dist %>'
         }]
       }
     },
