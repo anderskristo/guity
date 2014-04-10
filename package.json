@@ -4,7 +4,8 @@
   "author": "Anders Kristoffersson",
   "dependencies": {
     "gzippo": "~0.2.0",
-    "express": "~3.0.0"
+    "express": "~4.0.0",
+    "morgan": "~1.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
