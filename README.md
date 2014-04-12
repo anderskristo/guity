@@ -13,3 +13,6 @@ Put you key here:
 ```javascript
 var key = 'XXX';
 ````
+
+## Demo
+Try it out here: http://guity.herokuapp.com/
