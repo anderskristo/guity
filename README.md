@@ -15,4 +15,4 @@ var key = 'XXX';
 ````
 
 ## Demo
-Try it out here: http://guity.herokuapp.com/
+Try it out here: http://guity.anderskristo.me
