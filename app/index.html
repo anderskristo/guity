@@ -35,6 +35,10 @@
     <!-- Add your site or application content here -->
     <div class="app" ng-view></div>
 
+    <footer class="footer">
+      Build with <a href="https://angularjs.org/" target="_blank">AngularJS</a> &amp; <a href="http://sass-lang.com/" target="_blank">SASS.</a> Source code is available at <a href="https://github.com/anderskristo/guity" target="_blank">Github.</a> Powered by <a href="http://www.lastfm.com/" target="_blank">LastFM.</a>
+    </footer>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -50,7 +54,7 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-    
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
@@ -78,13 +82,13 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- angular-google-maps -->    
+    <!-- angular-google-maps -->
     <script src='bower_components/underscore/underscore-min.js'></script>
     <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
     <!-- end angular-google-maps -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>        
+        <script src="scripts/app.js"></script>
         <script src="scripts/controllers/search.js"></script>
         <script src="scripts/controllers/artist.js"></script>
         <script src="scripts/controllers/similar.js"></script>

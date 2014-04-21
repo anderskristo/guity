@@ -60,7 +60,7 @@ $bigRadius: 50px;
   margin: 20px 0;
 }
 
-body {
+html, body {
   background: #1D0F2D;
   color: #fff;
   font-weight: 100;
@@ -86,7 +86,7 @@ body {
           height: 50px;
           border-radius: 500px;
         }
-      }      
+      }
     }
 
     .navbar-left {
@@ -120,11 +120,11 @@ body {
               color: #fff;
               font-size: 18px;
               letter-spacing: 1px;
-              padding: 0 0 5px 0;              
-            }            
+              padding: 0 0 5px 0;
+            }
             a:hover,
             a.active-nav {
-              color: #fff;              
+              color: #fff;
             }
             a.active-nav:after {
               content: ' ';
@@ -182,7 +182,7 @@ body {
 
 /* index-view */
 
-.app-feature {  
+.app-feature {
   position: relative;
   z-index: 1;
 
@@ -445,7 +445,7 @@ body {
 
 /* artist-view */
 
-.artist-view {  
+.artist-view {
 
   h1, h2, h3, h4, h5 {
     color: #fff;
@@ -455,15 +455,15 @@ body {
 
   .bio-content {
     p {
-      font-size: 18px;          
+      font-size: 18px;
       letter-spacing: 1px;
     }
     a {
       color: #fff;
     }
   }
- 
-  .artist-stats { 
+
+  .artist-stats {
     float: left;
     margin-top: 35px;
     .stat-scrobblers,
@@ -476,9 +476,9 @@ body {
       float: left;
       margin-bottom: 40px;
       margin-right: 50px;
-      text-align: center;    
+      text-align: center;
     }
-    
+
    .icon-sound,
    .icon-lastfm {
      display: block;
@@ -487,7 +487,7 @@ body {
    }
    .icon-sound:before {
      content: "\e6b8";
-   }   
+   }
    .icon-lastfm:before {
     content: "\e705";
    }
@@ -581,7 +581,7 @@ body {
 
 /* loading-bar */
 .loading-cont {
-  width: 100%;  
+  width: 100%;
   .loading-bar {
     position: absolute;
     top: 200px;
@@ -594,7 +594,7 @@ body {
     .icon-cw {
       color: $mainColor;
       font-size: 64px;
-      display: block;      
+      display: block;
       -webkit-animation-name: spin;
       -webkit-animation-duration: 1000ms;
       -webkit-animation-iteration-count: infinite;
@@ -607,7 +607,7 @@ body {
       -ms-animation-duration: 1000ms;
       -ms-animation-iteration-count: infinite;
       -ms-animation-timing-function: linear;
-      
+
       animation-name: spin;
       animation-duration: 1000ms;
       animation-iteration-count: infinite;
@@ -709,7 +709,7 @@ body {
       list-style: none;
       a {
         color: #fff;
-        font-size: 15px;    
+        font-size: 15px;
       }
       a:hover {
         text-decoration: none;
@@ -727,9 +727,9 @@ body {
             -ms-transition: background .25s ease-in-out;
              -o-transition: background .25s ease-in-out;
                 transition: background .25s ease-in-out;
-        .icon-play {          
+        .icon-play {
           float: right;
-          font-size: 50px;          
+          font-size: 50px;
           line-height: 8px;
           color: #442070;
         }
@@ -741,6 +741,23 @@ body {
         background: rgba(68, 32, 112, 0.32);
       }
     }
+  }
+}
+
+/* footer */
+
+.footer {
+  position: fixed;
+  z-index: 222;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 10px 20px;
+  font-weight: normal;
+  color: #CCC;
+  background: rgba(68, 32, 112, 0.49);
+  a {
+    color: #ccc;
   }
 }
 
