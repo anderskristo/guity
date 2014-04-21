@@ -8,15 +8,14 @@ angular.module('guityApp')
       for (var i in images){
         images[images[i]['size']] = images[i]['#text'];
       };
-      
+
       $scope.artist = d.data.artist;
-      console.log($scope.artist)
 
       $scope.name = d.data.artist.name;
       $http.get(lastfm + '&method=artist.gettopalbums&artist=' + $scope.name.replace("&", "%26")).success(function(data) {
-        $scope.albums = data.topalbums.album;        
+        $scope.albums = data.topalbums.album;
 
-        jQuery.each($scope.albums, function(index, alb) {          
+        jQuery.each($scope.albums, function(index, alb) {
           var albImages = alb.image;
           for (var i in albImages){
             albImages[albImages[i]['size']] = albImages[i]['#text'];
