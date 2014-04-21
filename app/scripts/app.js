@@ -6,9 +6,9 @@ angular.module('guityApp', [
   'ngSanitize',
   'ngRoute',
   'google-maps',
-  'wu.masonry'  
+  'wu.masonry'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/search.html',
@@ -36,7 +36,10 @@ angular.module('guityApp', [
       })
       .otherwise({
         redirectTo: '/'
-      });    
+      });
+
+    $locationProvider.html5Mode(true);
+
   })
   .controller('appCtrl', function ($scope) {
     $scope.$on('load', function() {
