@@ -16,10 +16,9 @@ angular.module('guityApp')
           var artists = res.results.artistmatches.artist;
           for (var a in artists) imageTfr(artists[a].image);
           $scope.artists = res.results.artistmatches.artist;
-          // if (jQuery.isEmptyObject(artists[a].mbid) === true) {
-          //   $scope.artists.splice(1);
-          //   console.log('tar bort' + $scope.artists = res.results.artistmatches.artist)
-          // }
+          if (jQuery.isEmptyObject(artists[a].mbid) === true) {
+            $scope.artists.splice(1);
+          }
         });
       } else {
         $scope.artists = [];
