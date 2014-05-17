@@ -3,7 +3,7 @@ guity
 
 Simple AngularJS app where you can search for artists and get some basic information.
 
-Data is provided from the lastFM API.
+Data is provided from the LastFM API.
 
 ## Usage
 Get your lastFM API key here: http://www.lastfm.se/api
