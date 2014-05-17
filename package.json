@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/anderskristo/guity"
   },
-  "main": "/web.js"
+  "main": "/web.js",
   "dependencies": {
     "gzippo": "~0.2.0",
     "express": "~4.0.0",
